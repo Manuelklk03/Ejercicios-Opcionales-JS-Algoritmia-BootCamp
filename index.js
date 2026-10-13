@@ -40,3 +40,37 @@ function pedirNumeros() {
 }
 
 console.log(pedirNumeros());
+
+// EJERCICIO 3: Comprobar si un año es bisiesto
+const anio = parseInt(prompt("Introduce un año:"), 10);
+
+if (anio % 400 === 0 || (anio % 4 === 0 && anio % 100 !== 0)) {
+  console.log(anio + " es bisiesto");
+} else {
+  console.log(anio + " no es bisiesto");
+}
+
+// EJERCICIO 4: Contar un carácter dentro de un array de palabras
+function contarCaracteres(palabras, caracter) {
+  let contador = 0;
+
+  for (let i = 0; i < palabras.length; i++) {
+    for (let j = 0; j < palabras[i].length; j++) {
+      if (palabras[i][j] === caracter) {
+        contador++;
+      }
+    }
+  }
+
+  return contador;
+}
+
+const data = [
+  "yoda",
+  "best",
+  "has",
+  "tortilla",
+  "cAfe",
+  "barrita tomate",
+  "zumo",
+];
